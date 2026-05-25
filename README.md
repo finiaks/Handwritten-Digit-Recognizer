@@ -53,6 +53,7 @@ Input(784) → Dense(256,ReLU) → BatchNorm → Dropout(0.3)
 
 ## Project Structure
 
+```
 digit_recognition_ml/
 ├── model/
 │ └── digit_model.h5
@@ -63,6 +64,7 @@ digit_recognition_ml/
 │ └── improved_model.py
 │ └── app.py
 └── requirements.txt
+```
 
 ## Live Demo
 
