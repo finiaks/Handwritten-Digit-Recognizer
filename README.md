@@ -30,6 +30,7 @@ it instantly with confidence score!
 | ----------------------- | -------- |
 | Basic Neural Network    | 97.5%    |
 | Improved Neural Network | 98.03%   |
+| CNN                     | 99.19%   |
 
 ## 🔧 Model Improvements
 
@@ -51,6 +52,13 @@ Input(784) → Dense(256,ReLU) → BatchNorm → Dropout(0.3)
 → Dense(64,ReLU) → Dropout(0.2)
 → Output(10,Softmax)
 
+## Final Model: CNN
+
+- 3 Convolution blocks
+- BatchNormalization
+- MaxPooling
+- Dropout(0.3)
+
 ## Project Structure
 
 ```
@@ -58,11 +66,13 @@ digit_recognition_ml/
 ├── model/
 │ └── digit_model.h5
 │ └── digit_model_improved.keras
+│ └── digit_cnn_model.keras
 ├── src/
 │ ├── main.py
 │ └── predict.py
 │ └── improved_model.py
 │ └── app.py
+│ └── cnn_model.py
 └── requirements.txt
 ```
 

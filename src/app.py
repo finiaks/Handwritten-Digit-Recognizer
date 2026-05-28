@@ -5,7 +5,7 @@ from streamlit_drawable_canvas import st_canvas
 from PIL import Image
 
 #Load Model
-model = keras.models.load_model("model/digit_model.h5")
+model = keras.models.load_model("model/digit_cnn_model.keras")
 
 #Title
 st.title("Handwritten Digit Recognizer")
@@ -32,7 +32,7 @@ if st.button("Predict Digit!"):
         img = img.convert('L')
         img = img.resize((28,28))
         img_array = np.array(img) / 255.0
-        img_array = img_array.reshape(1, 784)
+        img_array = img_array.reshape(1, 28, 28, 1)
 
         #Predict 
         prediction = model.predict(img_array)
